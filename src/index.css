@@ -1,0 +1,9 @@
+li a.active{
+    color: yellow;
+    background-color:blue;
+}
+
+@import "tailwindcss";
+@plugin "daisyui"
+
+
