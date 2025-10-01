@@ -3,10 +3,10 @@ import { createRoot } from "react-dom/client";
 import "./index.css";
 
 import { createBrowserRouter, RouterProvider } from "react-router";
-import About from "./Components/Pages/About.jsx";
-import Contact from "./Components/Pages/Contact.jsx";
-import Home from "./Home.jsx";
-import RootLayout from "./Components/RootLayout.jsx";
+import About from "./Pages/About.jsx";
+import Contact from "./Pages/Contact.jsx";
+import Home from "./Pages/Home.jsx";
+import RootLayout from "./Layouts/RootLayout.jsx";
 
 const router = createBrowserRouter([
   {
@@ -29,6 +29,10 @@ const router = createBrowserRouter([
         path: "/about",
         element: <About></About>,
       },
+      {
+        path: "dashbourd",
+        element: <p>I am Dashbourd</p>
+      }
     ],
   },
 ]);

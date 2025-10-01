@@ -1,6 +1,6 @@
 import React from "react";
-import Nabver from "./Nabver";
-import Footer from "./Footer";
+import Nabver from "../Components/Nabver";
+import Footer from "../Components/Footer";
 import { Outlet } from "react-router";
 
 const RootLayout = () => {

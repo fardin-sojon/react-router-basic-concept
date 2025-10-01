@@ -1,5 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router';
+import logoPng from "../assets/React-Router.png"
 
 const Nabver = () => {
     return (
@@ -13,12 +14,12 @@ const Nabver = () => {
       <ul
         tabIndex={0}
         className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
-        <li><a>Home</a></li>
-        <li><a>About</a></li>
-        <li><a>Contact</a></li>
+      <li><NavLink to="/">Home</NavLink></li>
+      <li><NavLink to="/about">About</NavLink></li>
+      <li><NavLink to="/contact">Contact</NavLink></li>
       </ul>
     </div>
-    <a className="btn btn-ghost text-xl">React Router</a>
+    <a className="text-xl font-bold"><img className='inline' src={logoPng} alt="React Router" />React Router Basic Concept</a>
   </div>
   <div className="navbar-center hidden lg:flex">
     <ul className="menu menu-horizontal px-1">
