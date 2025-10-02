@@ -2,7 +2,7 @@
 // import React, { useEffect, useState } from "react";
 // import { useParams } from "react-router";
 
-import { useLoaderData } from "react-router";
+import { useLoaderData, useLocation } from "react-router";
 
 const PlantDetails = () => {
 //   const { id } = useParams();
@@ -28,6 +28,9 @@ const PlantDetails = () => {
   //     "category": "Fruit Tree",
   //     "price": 500
   // }
+
+  const location = useLocation()
+  console.log(location);
 
   const {data} = useLoaderData()
 //   console.log(data);

@@ -26,7 +26,7 @@ const PlantCard = ({ plant }) => {
           </h2>
           <p>{description}</p>
           <div className=" flex justify-between items-center gap-7">
-            <Link to={`/plant-details/${id}`} className="btn btn-primary">Plant Details</Link>
+            <Link state={plant} to={`/plant-details/${id}`} className="btn btn-primary">Plant Details</Link>
             <div className="flex gap-1">
             <div className="badge badge-outline">Price: {price}</div>
             
