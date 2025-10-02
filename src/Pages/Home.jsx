@@ -18,8 +18,7 @@ const Home = () => {
 
   return (
     <div className="ml-3">
-      <h3>Welcome Home</h3>
-      <h2 className="text-green-500 text-3xl">Plants Card</h2>
+      <h2 className="text-green-500 text-3xl mt-5">Plants Card</h2>
       <div className="grid md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4 gap-5 py-8">
           {
         plants.map(plant=> <PlantCard key={plant?.id} plant={plant}></PlantCard>)

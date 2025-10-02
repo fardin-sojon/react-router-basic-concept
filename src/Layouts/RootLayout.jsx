@@ -13,7 +13,6 @@ const RootLayout = () => {
   return (
     <div>
       <Nabver></Nabver>
-      <h2 className="text-yellow-300">This is RootLayout</h2>
       {navigation?.state === "loading"? <LoadingSpinner></LoadingSpinner> : <Outlet></Outlet>}
       <Footer></Footer>
     </div>

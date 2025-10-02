@@ -38,7 +38,7 @@ const PlantDetails = () => {
 
   return (
     <div>
-      <div className="card bg-base-100 h-190 max-w-5xl mx-auto shadow-sm">
+      <div className="card bg-base-100 h-100 md:h-190 max-w-5xl mt-5 mx-auto shadow-sm">
         <figure>
           <img src={image} alt="Fruit" />
         </figure>
@@ -50,7 +50,7 @@ const PlantDetails = () => {
           <p>{description}</p>
           <div className="card-actions justify-end">
             <div className="badge badge-outline">Price: {price}</div>
-            <div className="badge badge-outline">Add to Cart</div>
+            <div className="btn btn-primary">Add to Cart</div>
           </div>
         </div>
       </div>

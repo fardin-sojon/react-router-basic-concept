@@ -1,6 +1,7 @@
 import React from 'react';
 import { NavLink } from 'react-router';
 import logoPng from "../assets/React-Router.png"
+import ThemeToggle from './ThemeToggle';
 
 const Nabver = () => {
     return (
@@ -19,7 +20,7 @@ const Nabver = () => {
       <li><NavLink to="/contact">Contact</NavLink></li>
       </ul>
     </div>
-    <a className="text-xl font-bold"><img className='inline' src={logoPng} alt="React Router" />React Router Basic Concept</a>
+    <a className="text-xl font-bold"><img className='inline' src={logoPng} alt="React Router" />React Router</a>
   </div>
   <div className="navbar-center hidden lg:flex">
     <ul className="menu menu-horizontal px-1">
@@ -29,7 +30,7 @@ const Nabver = () => {
     </ul>
   </div>
   <div className="navbar-end">
-    <a className="btn">Button</a>
+    <ThemeToggle></ThemeToggle>
   </div>
 </div>
         </div>
