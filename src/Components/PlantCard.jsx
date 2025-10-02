@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router";
 
 const PlantCard = ({ plant }) => {
   //     {
@@ -10,7 +11,7 @@ const PlantCard = ({ plant }) => {
   //     "price": 500
   // }
 
-  const { name, image, description, category, price } = plant;
+  const { name, image, description, category, price, id } = plant;
 
   return (
     <div>
@@ -24,9 +25,12 @@ const PlantCard = ({ plant }) => {
             <div className="badge badge-secondary">{category}</div>
           </h2>
           <p>{description}</p>
-          <div className="card-actions justify-end">
-            <div className="badge badge-outline">{price}</div>
+          <div className=" flex justify-between items-center gap-7">
+            <Link to={`/plant-details/${id}`} className="btn btn-primary">Plant Details</Link>
+            <div className="flex gap-1">
+            <div className="badge badge-outline">Price: {price}</div>
             <div className="badge badge-outline">Add Cart</div>
+          </div>
           </div>
         </div>
       </div>

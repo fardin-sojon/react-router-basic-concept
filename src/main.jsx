@@ -7,6 +7,9 @@ import About from "./Pages/About.jsx";
 import Contact from "./Pages/Contact.jsx";
 import Home from "./Pages/Home.jsx";
 import RootLayout from "./Layouts/RootLayout.jsx";
+import PlantDetails from "./Pages/PlantDetails.jsx";
+import axios from "axios";
+import LoadingSpinner from "./Components/LoadingSpinner.jsx";
 
 const router = createBrowserRouter([
   {
@@ -15,6 +18,7 @@ const router = createBrowserRouter([
     children: [
       {
         index: true,
+        loader: ()=>fetch('https://openapi.programming-hero.com/api/plants'),
         element: <Home></Home>,
       },
       {
@@ -30,8 +34,9 @@ const router = createBrowserRouter([
         element: <About></About>,
       },
       {
-        path: "dashbourd",
-        element: <p>I am Dashbourd</p>
+        path: "/plant-details/:id",
+        loader: ({params})=> axios(`https://openapi.programming-hero.com/api/plant/${params.id}`),
+        Component: PlantDetails
       }
     ],
   },
